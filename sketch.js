@@ -39,6 +39,9 @@ function mouseReleased(){
 }
 function keyPressed(key){
     if(key.key===' '){
+        Matter.World.remove(engine.world,bird.body);
+        bird=new Bird(380,450,20);
+        sling.body=bird.body;
         sling.constrain.bodyB=sling.body;
         console.log(sling);
     }
